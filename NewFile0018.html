@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<div class="container">
+		<table class='table table-striped'>
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>이름</th>
+					<th>사는곳</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>홍길동</td>
+					<td>울릉도</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>이순신</td>
+					<td>남해</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>세종대왕</td>
+					<td>궁궐</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--  부트스트랩 버튼 오른쪽 정렬 -->
+		<button type="button" class="btn btn-info float-right">글 쓰 기</button>
+		<!-- justify-content-center : 가운데 정렬 -->
+		<ul class="pagination justify-content-center">
+			<li class="page-item active"><a class="page-link" href="#">&lt;&lt;</a></li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">4</a></li>
+			<li class="page-item"><a class="page-link" href="#">5</a></li>
+			<li class="page-item"><a class="page-link" href="#">6</a></li>
+			<li class="page-item"><a class="page-link" href="#">7</a></li>
+			<li class="page-item"><a class="page-link" href="#">8</a></li>
+			<li class="page-item"><a class="page-link" href="#">9</a></li>
+			<li class="page-item"><a class="page-link" href="#">10</a></li>
+			<li class="page-item"><a class="page-link" href="#">&gt;&gt;</a></li>
+		</ul>
+	</div>
+
+
+
+
+	<script>
+		$(document).ready(function() {
+			$('.page-item').click(function() {
+				//$(".active").removeClass('active');
+				$('li').not(this).removeClass('active');
+				$(this).addClass('active');
+			})
+
+		})
+	</script>
+</body>
+</html>
